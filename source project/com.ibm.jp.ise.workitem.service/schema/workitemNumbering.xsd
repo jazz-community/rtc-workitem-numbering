@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://com.ibm.jp.ise.workitem.service/process/workitemNumbering"
+	targetNamespace="http://com.ibm.jp.ise.workitem.service/process/workitemNumbering"
+	xmlns:process="http://com.ibm.team.process"
+	attributeFormDefault="unqualified" elementFormDefault="qualified">
+	
+	<xsd:annotation>
+		<xsd:documentation xsd:lang="ja">
+			このファイルはワークアイテム番号採番用のフォローアップアクションの定義が含まれます。
+			当機能の対象外とするファイルの拡張子をコンポーネントごとに定義します。
+		</xsd:documentation>
+		<xsd:documentation xsd:lang="en">
+			This file includes the definitions of Workitem Numbering follow-up action.
+			It defines the file extensions which is out of target in this follow-up action.
+		</xsd:documentation>
+	</xsd:annotation>
+	
+	<xsd:import namespace="http://com.ibm.team.process" schemaLocation="platform:/plugin/com.ibm.team.process.common/schema/ProcessSettings.xsd"/>
+	
+	<xsd:element name="followup-action" substitutionGroup="process:followup-action" type="workItemNumberingType"/>
+
+	<xsd:complexType name="workItemNumberingType">
+		<xsd:annotation>
+			<xsd:documentation xsd:lang="ja">
+				このタイプでは対象のワークアイテム・タイプを定義します。
+				このタイプは「process:followupActionType」を親としたサブタイプです。
+				このrestriction要素と前述のsubstitutionGroupの仕様により
+				プロジェクトのチームエリアのプロセス構成にフォローアップアクションの構成を追加できるようになります。
+				後述の各要素の説明も合わせて参照してください。
+			</xsd:documentation>
+			<xsd:documentation xsd:lang="en">
+				This type defines the workitem types which is target.
+				This type is the sub types which parent is "process:followupActionType".
+				You can add the configuration of the follow-up action into the process configuration for project team area along with this restriction element and the specification of the substitutionGroup.
+				Please refer the description of each element which is to be described. 
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="process:followupActionType">
+				<xsd:sequence>
+					<xsd:element name="types" type="workItemsType" minOccurs="0" maxOccurs="1"/>
+					<xsd:element name="options" type="options" minOccurs="0" maxOccurs="1"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="workItemsType">
+		<xsd:sequence>
+			<xsd:element name="type" type="workItemType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="workItemType">
+		<xsd:annotation>
+			<xsd:documentation xsd:lang="ja">
+				このタイプにはワークアイテム・タイプの識別子が定義されます。
+			</xsd:documentation>
+			<xsd:documentation xsd:lang="en">
+				This type defines the identifier of the workitem type.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="attribute" type="workItemAttribute" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="workItemAttribute">
+		<xsd:annotation>
+			<xsd:documentation xsd:lang="ja">
+				このタイプにはワークアイテム属性の識別子が定義されます。
+			</xsd:documentation>
+			<xsd:documentation xsd:lang="en">
+				This type defines the identifier of workitem attribute.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="id" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="options">
+		<xsd:annotation>
+			<xsd:documentation xsd:lang="ja">
+				このタイプにはワークアイテム番号採番の桁数が定義されます。
+			</xsd:documentation>
+			<xsd:documentation xsd:lang="en">
+				This type defines the number of digit for workitem numbering.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="numberOfDigit" type="xsd:int" use="required"/>
+	</xsd:complexType>
+	
+
+</xsd:schema>

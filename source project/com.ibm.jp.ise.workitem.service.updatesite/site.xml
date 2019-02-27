@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.ibm.jp.ise.workitem.service.feature_1.0.0.201410021602.jar" id="com.ibm.jp.ise.workitem.service.feature" version="1.0.0.201410021602"/>
+</site>

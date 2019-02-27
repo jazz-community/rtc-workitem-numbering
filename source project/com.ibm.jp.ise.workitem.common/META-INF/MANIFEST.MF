@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: com.ibm.jp.ise.workitem.common;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: com.ibm.jp.ise.workitem.common
+Bundle-Vendor: %Bundle-Vendor
+Require-Bundle: com.ibm.team.repository.common

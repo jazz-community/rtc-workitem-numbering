@@ -1,0 +1,6 @@
+#Tue Jul 15 15:46:18 JST 2014
+com.ibm.rational.llc.ide.ui.unit.line.threshold=100
+com.ibm.rational.llc.ide.ui.type.line.threshold=100
+com.ibm.rational.llc.ide.ui.method.line.threshold=100
+eclipse.preferences.version=1
+com.ibm.rational.llc.ide.ui.package.line.threshold=100

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.ibm.jp.ise.workitem.service.feature"
+      label="Workitem Server Extension feature"
+      version="1.0.0.qualifier"
+      provider-name="IBM Japan Systems Engineering Co.,Ltd.">
+
+   <plugin
+         id="com.ibm.jp.ise.workitem.common"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.ibm.jp.ise.workitem.service"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

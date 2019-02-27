@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+	<extension
+         point="com.ibm.team.process.ide.ui.processAspectEditorFactories">
+      <factory
+            aspectId="com.ibm.jp.ise.workitem.service.process.workItemNumbering"
+            class="com.ibm.jp.ise.workitem.ide.ui.aspecteditor.WorkItemNumberingAspectEditorFactory">
+      </factory>
+   </extension>
+
+</plugin>

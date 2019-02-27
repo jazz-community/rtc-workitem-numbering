@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: com.ibm.jp.ise.workitem.service;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: com.ibm.jp.ise.workitem.common;bundle-version="1.0.0",
+ org.eclipse.core.runtime,
+ com.ibm.team.process.common,
+ com.ibm.team.repository.service,
+ com.ibm.team.repository.common,
+ com.ibm.team.workitem.common,
+ com.ibm.team.workitem.service
+Bundle-Vendor: %Bundle-Vendor
+Bundle-Localization: plugin
